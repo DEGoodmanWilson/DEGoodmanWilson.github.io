@@ -1,0 +1,19 @@
+# Site settings
+title: D.E. Goodman-Wilson
+email: degoodmanwilson@gmail.com
+description: >
+  Don's portfolio
+# Build settings
+markdown: kramdown
+collections:
+  - professional
+  - side
+  - talks
+
+#
+#defaults:
+#  - scope:
+#      path: ""
+#      type: professional
+#    values:
+#      layout: pro
