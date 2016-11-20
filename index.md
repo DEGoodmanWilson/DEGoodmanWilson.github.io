@@ -10,7 +10,7 @@ title: D.E. Goodman-Wilson
             <p class="lead">My heart lies in engineering cool products with smart, friendly people. I work on Slack’s
             Platform, leading a brilliant team that builds relationships and tools with our developers. Throughout my
             career I have engaged emerging technologies from many approaches: streaming media, embedded hardware,
-            XXX and even the model railroading industry. I’ve proven my grit by achieving my PhD philosophy, and my
+            TODO and even the model railroading industry. I’ve proven my grit by achieving my PhD philosophy, and my
             training in the philosophy of mind and neuroscience informs my work as an engineer.
             When I am not working, I love traveling, sailing, foreign languages and
             enjoying all life has to offer with my wife and daughter by my side.</p>
