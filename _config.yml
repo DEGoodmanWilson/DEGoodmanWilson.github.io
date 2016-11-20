@@ -5,6 +5,8 @@ description: >
   Don's portfolio
 # Build settings
 markdown: kramdown
+gems:
+  - jemoji
 collections:
   - professional
   - side

@@ -1,6 +1,7 @@
 ---
 title: Sign in with Slack
 company: slack
+link: https://api.slack.com/docs/sign-in-with-slack
 order: 5
 ---
 
