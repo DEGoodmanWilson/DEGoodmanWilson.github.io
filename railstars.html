@@ -1,0 +1,22 @@
+---
+layout: default
+title: Railstars
+---
+
+<div id="bio">
+    <img style="float: left; margin-right:20px;" src="https://www.gravatar.com/avatar/3dfda2eb2ab5963bbbd1cecd4c403bd3?s=105">
+    <h1>Don Goodman-Wilson</h1>
+    <h2>{{ page.title }}</h2>
+</div>
+
+<div class="row" id="projects">
+    {% assign sorted_side = site.railstars | sort:"order" %}
+    {% for item in sorted_side %}
+    <div class="col-md-4">
+        <h3>{{ item.title }}
+            <small><a href="{{ item.link }}">link</a></small>
+        </h3>
+        <p>{{ item.content }}</p>
+    </div>
+    {% endfor %}
+</div>

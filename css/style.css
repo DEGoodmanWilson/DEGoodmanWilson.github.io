@@ -2,16 +2,37 @@ body {
     font-family: 'Karla', sans-serif;
     font-size: 12pt;
     color: #555;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 h1, h2, h3 {
     text-transform: uppercase;
-    font-family: 'Unica One', cursive;
+    font-family: 'Unica One', sans-serif;
 }
 
 /* Bio */
 
+#bio>h1 {
+    font-size: 40pt;
+}
+
 #bio>h2 {
     color: #888;
     margin-bottom: 1em;
+}
+
+#bio~h2 {
+    font-size: 35pt;
+}
+#bio~div {
+    margin-bottom: 100px;
+}
+
+#work-items>div {
+    border: thin solid #222;
+    border-radius: 4px;
+    width: calc(50% - 10px);
+    margin: 5px;
+    background-color: #EEE;
 }
