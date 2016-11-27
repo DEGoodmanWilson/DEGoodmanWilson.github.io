@@ -1,0 +1,28 @@
+# Site settings
+title: D.E. Goodman-Wilson
+email: degoodmanwilson@gmail.com
+description: >
+  Don's portfolio
+# Build settings
+markdown: kramdown
+gems:
+  - jemoji
+collections:
+  slack:
+    ouput: true
+  screenhero:
+    output: true
+  railstars:
+    output: true
+  side:
+    output: false
+  talks:
+    output: false
+
+#
+#defaults:
+#  - scope:
+#      path: ""
+#      type: professional
+#    values:
+#      layout: pro

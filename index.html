@@ -1,15 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>D.E. Goodman-Wilson</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<div class="container text-center">
-  <h1><img src="https://avatars3.githubusercontent.com/u/521866?v=3&s=128" /> D.E. Goodman-Wilson</h1>
+---
+layout: default
+title: Don Goodman-Wilson
+---
+<div id="bio">
+    <img style="float: left; margin-right:20px;" src="https://www.gravatar.com/avatar/3dfda2eb2ab5963bbbd1cecd4c403bd3?s=105">
+    <h1>{{ page.title }}</h1>
+    <h2>Engineer & Tinkerer</h2>
+
+    <h4>View my <a href="https://www.linkedin.com/in/degoodmanwilson">full CV on LinkedIn</a></h4>
+
+    <div class="row">
+        <div class="col-md-8">
+            <p>I’m a philosopher-engineer experienced in architecting amazing products with successful early-stage startups.</p>
+            <p>My heart lies in engineering cool products with smart, friendly people. I currently work on Slack’s Platform, leading a brilliant team of developer advocates that build relationships and tools with third-party developers. Throughout my career I have engaged a broad range of technologies: chatbots, webapps, desktop apps, streaming media, embedded hardware, and even the model railroading industry. I’ve proven my grit by achieving my PhD philosophy, and my training in the philosophy of mind and neuroscience informs my work as a chatbot builder. When I am not working, I love traveling, sailing, foreign languages and enjoying all life has to offer with my wife and daughter by my side.</p>
+        </div>
+    </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</body>
-</html>
+
+
+<!-- Professional work -->
+<h2 id="work">Work</h2>
+<div class="row" id="work-items">
+    <div class="col-md-6">
+        <h3>Slack</h3>
+        <p><a href="slack.html">Projects</a></p>
+        <p>I am currently leading the Developer Tools team within Developer Relations. My team builds and educates our community of developers through workshops and talks, and we craft tools to help developers succeed on the Slack Platform. Our tools to date include open source SDKs, debugging tools, code examples, and tutorials. Prior to working with DevRel, I have worked as an engineer on nearly every part of the Slack technology stack, including the backend and native clients.</p>
+    </div>
+    <div class="col-md-6" style="margin-bottom:100px;">
+        <h3>Screenhero</h3>
+        <p><a href="screenhero.html">Projects</a></p>
+        <p>I have worked on everything from meddling with mice and USB streams at the kernel level in C, to responsive single-page web apps in JS and Ruby, to business finance, business development, and marketing. As the first employee at this early-stage startup, I had to wear many hats, and be ready to quickly respond to changing needs in a fluid environment.</p>
+    </div>
+    <div class="col-md-6">
+        <h3>Railstars</h3>
+        <p><a href="railstars.html">Projects</a></p>
+        <p>As the founder and sole employee, I was responsible for all aspects of my own business. In addition to operating and growing the business, I designed, tested, manufactured, marketed, sold, and shipped custom electronics for model railroad applications. When not working on my own products, I also engaged in OEM design consulting for a number of external clients working within the model railroading industry. Finally, I was very active working with the National Model Railroading Association—the industry standards-setting body—in developing a new standard for reliable device networking specifically for model railroads, <a href="http://openlcb.org/openlcb-and-lcc-documents/layout-command-control-lcc/">Layout Command Control</a>.</p>
+    </div>
+</div>
+
+<!-- Talks -->
+<h2 id="talks">Selected Talks</h2>
+<div class="row">
+    {% assign sorted_talks = site.talks | sort:"order" %}
+    {% for item in sorted_talks %}
+    <div class="col-md-6">
+        <h3>{{ item.title }}{% if item.link %}
+            <small><a href="{{ item.link }}">link</a></small>
+            {% endif %}
+        </h3>
+        {% if item.media %}
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ item.media }}" allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        <p>{{ item.content }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Side projects -->
+<h2 id="projects">Projects & Fun</h2>
+<small>Just want to see the code? Some of my stuff is <a href="http://github.com/DEGoodmanWilson">open
+    source</a>.
+</small>
+<div class="row" id="projects">
+    {% assign sorted_side = site.side | sort:"order" %}
+    {% for item in sorted_side %}
+    <div class="col-md-4">
+        <h3>{{ item.title }}
+            <small><a href="{{ item.link }}">link</a></small>
+        </h3>
+        <p>{{ item.content }}</p>
+    </div>
+    {% endfor %}
+</div>
