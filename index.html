@@ -49,16 +49,16 @@ title: Don Goodman-Wilson
     {% assign sorted_talks = site.talks | sort:"order" %}
     {% for item in sorted_talks %}
     <div class="col-md-6">
-        <h3>{{ item.title }}{% if item.link %}
-            <small><a href="{{ item.link }}">link</a></small>
-            {% endif %}
-        </h3>
+        <h3>{{ item.title }}</h3>
         {% if item.media %}
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="{{ item.media }}" allowfullscreen></iframe>
         </div>
         {% endif %}
         <p>{{ item.content }}</p>
+        {% if item.link %}
+            <p><a href="{{ item.link }}">read more</a></p>
+        {% endif %}
     </div>
     {% endfor %}
 </div>
